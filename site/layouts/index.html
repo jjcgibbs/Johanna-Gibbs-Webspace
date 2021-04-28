@@ -1,34 +1,83 @@
 {{ define "main" }}
 
 <div class="container">
-    
-    {{ partial "nav" . }}
-    
-    <div class="intro">
+    <div class="top">
         <h1>{{.Params.title}}</h1>
-        <h2>{{.Params.subtitle}}</h2>
+    </div>
+    
+    <div class="librarian">
+        <a href="pages/librarian.html" class="librarian">{{.Params.librarian}}</a>
     </div>
 
-    <div class="content">
-        <div class="content-image">
-            <img src="{{ .Params.image }}" alt="{{ .Title }}" />
-        </div>
-        <div class="content-text">
-            <h2>{{.Params.intro.heading}}</h2>
-            <p>{{.Params.intro.text}}</p>
-        </div>
-    </div>
 
-    <div class="gallery">
-        {{ range .Paginator.Pages.ByPublishDate.Reverse }}
-            <div class="gallery-item">
-                <a href="{{ .RelPermalink }}">
-                    <img src="{{ .Params.image }}" alt="{{ .Title }}" />
-                    <h2>{{ .Title }}</h2>
-                    <p>{{ .Date.Format "2006" }}</p>
-                </a>
-            </div>
-        {{ end }}
+    <div class="container1">
+            
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/Trishy.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/Indexing.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/CWS.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/ABAAB.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/CN.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/Languaging.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/DVD.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/SOS.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/Tsar.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/SHTDI.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
+        <div class="item" style="background-image: '{{ Params.image }}';">
+            <a href="pages/Compress.html" class="help">
+                <div class="button-text">{{.Params.project-title}}</div>
+            </a>
+        </div>
+
     </div>
 
 </div>
